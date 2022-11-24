@@ -171,7 +171,7 @@ with open('datascraped.csv', 'w', encoding='utf8', newline='') as f:
         driver.switch_to.window(driver.window_handles[0])
          
     print('almost done scrapping...3/4')    
-    for i in range(42,66):
+    for i in range(42,65):
         driver.find_element(by=By.LINK_TEXT, value=str(i)).click()
         for a in lists.find_all("a", id=re.compile("datagrid_results__ct")):
             LINKS4.append(a["id"])
